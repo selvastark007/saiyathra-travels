@@ -1,0 +1,176 @@
+:root{
+    --primaryColor : hsl(199,100%,33%);
+    --secondaryColor: hsl(187,85%,43%);
+    --gradientColor : linear-gradient(to right, hsl(187,85%,43%),hsl(199,100%,33%));
+    --whiteColor : hsl(0,0%,100%);
+    --blackColor : hsl(201,33%,16%);
+    --textColor  : hsl(240,4%,36%);
+    --whiteColorDeam : hsl(0,0%,93%);
+    --greyText : rgb(190,190,190);
+    --inputColor : rgb(239,239,239);
+    --bodyColor : rgb(240,240,246);
+    --cardBG : rgb(225,225,235);
+    --cardHover: rgb(255,255,255);
+}
+.main{
+    width: 100%;
+}
+.main .secTitle .title{
+    position: relative;
+    width: max-content;
+    color: var(--textColor);
+    margin: 1rem;
+    z-index: 2;
+}
+.main .secTitle .title::after{
+    position: absolute;
+    content: '';
+    background:#f2a41d;
+    height: 3px;
+    width: 120px;
+    right: 0;
+    bottom: -3px;
+    z-index: -1;
+}
+.secContent{
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    gap: 1rem;
+}
+.secContent .singleDestination{
+    height: 100%;
+    display: grid;
+    row-gap: 10px;
+    /* padding: 1rem; */
+    /* border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px; */
+    align-items: center;
+    background: var(--whiteColor);
+    /* box-shadow: 0 2px 4px rgba(140,140, 141, 0.549); */
+    overflow: hidden;
+}
+.secContent .singleDestination:hover{
+    background: var(--cardHover);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+}
+.secContent .imageDiv{
+    height: 150px;
+    width: 100%;
+    overflow: hidden;
+}
+.secContent .imageDiv img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+}
+.secContent .imageDiv:hover img{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+.singleDestination .btn{
+    padding: 0.5rem 1rem;
+} 
+.cardInfo{
+    padding: 1rem;
+}
+.cardInfo .destTitle{
+    color: var(--blackColor);
+    font-size: 1.25rem;
+}
+.cardInfo .continent{
+    gap: 0.5rem;
+}
+.cardInfo .continent .icon{
+    color: var(--textColor);
+}
+.cardInfo .continent .name{
+    color: var(--textColor);
+    font-weight: 400;
+    font-size: 14px;
+}
+ .fees{
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-top: 1.5px solid var(--greyText);
+    border-bottom: 1.5px solid var(--greyText);
+    gap: 1rem;
+}
+.fees .grade{
+    color: var(--blackColor);
+    font-weight: 600;
+    max-width: max-content;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fees .grade small{
+    text-align: center;
+    background: var(--gradientColor);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    color: var(--whiteColor);
+    padding: 1px 10px;
+    font-size: 10px;
+}
+.price{
+    font-size: 2rem;
+    color: var(--primaryColor);
+}
+.dsec{
+    font-size: 13.5px;
+    color: var(--blackColor);
+    font-weight: 500;
+    /* font-size: 15px !important; */
+    text-transform: lowercase;
+}
+
+.cardInfo .btn{
+    margin-top:1rem;
+    color: var(--whiteColor);
+    font-weight: 600;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+.cardInfo .btn .icon{
+    align-self: center;
+    font-size: 18px;
+}
+.dualBtn{
+    /* gap: 1rem; */
+    justify-content: space-between;
+}
+.yellowGradient{
+    background:#f3ac11!important;
+}
+@media  (max-width:768px){
+    .secContent{
+        grid-template-columns: 100%;
+    }
+}
+@media only screen and (min-width:769px) and (max-width:1024px){
+    .secContent{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
